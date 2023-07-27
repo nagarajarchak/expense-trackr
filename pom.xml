@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.thecodeproject</groupId>
-	<artifactId>to-do</artifactId>
+	<artifactId>expense-trackr</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>to-do</name>
 	<description>A to-do app built with spring framework.</description>

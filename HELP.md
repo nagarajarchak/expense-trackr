@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'io.thecodeproject.to-do' is invalid and this project uses 'io.thecodeproject.todo' instead.
+* The original package name 'io.thecodeproject.to-do' is invalid and this project uses 'io.thecodeproject.expensetrackr' instead.
 
 # Getting Started
 

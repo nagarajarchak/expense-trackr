@@ -1,4 +1,4 @@
-package io.thecodeproject.todo;
+package io.thecodeproject.expensetrackr;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
