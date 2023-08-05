@@ -1,4 +1,4 @@
-package io.thecodeproject.themes.vo.response.generic;
+package io.thecodeproject.expensetrackr.vo.response.generic;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
@@ -16,6 +16,6 @@ public class Result {
 
     private Integer response;
     private String description;
-    private List<Errors> errors = new ArrayList<>();
+    private List<Error> errors = new ArrayList<>();
 
 }

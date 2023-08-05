@@ -8,6 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class ExpenseRequest {
+
     private String title;
     private String description;
     private String type;

@@ -1,4 +1,4 @@
-package io.thecodeproject.themes.vo.response.generic;
+package io.thecodeproject.expensetrackr.vo.response.generic;
 
 import lombok.Getter;
 import lombok.Setter;
