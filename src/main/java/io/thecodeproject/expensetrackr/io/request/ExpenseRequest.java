@@ -1,4 +1,4 @@
-package io.thecodeproject.expensetrackr.vo.request;
+package io.thecodeproject.expensetrackr.io.request;
 
 import lombok.Getter;
 import lombok.Setter;

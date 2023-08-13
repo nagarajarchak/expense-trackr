@@ -1,7 +1,7 @@
-package io.thecodeproject.expensetrackr.vo.response;
+package io.thecodeproject.expensetrackr.io.response;
 
-import io.thecodeproject.expensetrackr.vo.response.generic.ApiStatus;
-import io.thecodeproject.expensetrackr.vo.response.generic.Result;
+import io.thecodeproject.expensetrackr.io.response.generic.ApiStatus;
+import io.thecodeproject.expensetrackr.io.response.generic.Result;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
