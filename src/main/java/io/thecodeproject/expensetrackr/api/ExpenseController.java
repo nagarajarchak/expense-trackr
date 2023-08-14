@@ -1,16 +1,17 @@
 package io.thecodeproject.expensetrackr.api;
 
+import io.thecodeproject.expensetrackr.io.request.ExpenseRequest;
+import io.thecodeproject.expensetrackr.io.response.ExpenseResponse;
+import io.thecodeproject.expensetrackr.io.response.ListAllExpenseResponse;
 import io.thecodeproject.expensetrackr.service.ExpenseService;
-import io.thecodeproject.expensetrackr.constant.RequestConstant;
+import io.thecodeproject.expensetrackr.constant.RequestEndpoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(RequestConstant.EXPENSE_BASE)
+@RequestMapping(RequestEndpoint.EXPENSE_TRACKR_BASE)
 public class ExpenseController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ExpenseController.class);
@@ -18,10 +19,24 @@ public class ExpenseController {
     @Autowired
     private ExpenseService expenseService;
 
-    @PostMapping("/new")
-    public void registerExpense()
+    @PostMapping(value = RequestEndpoint.REGISTER_EXPENSE)
+    public ExpenseResponse registerExpense(@RequestBody ExpenseRequest expenseRequest)
     {
-        expenseService.registerExpense();
+        LOG.info("Registering expense using request API: " + RequestEndpoint.REGISTER_EXPENSE);
+        ExpenseResponse expenseResponse = new ExpenseResponse();
+        expenseResponse = expenseService.registerExpense(expenseRequest, expenseResponse);
+        LOG.info("Expense registration successful!");
+        return expenseResponse;
+    }
+
+    @GetMapping(RequestEndpoint.LIST_ALL_EXPENSE)
+    public ListAllExpenseResponse listAllExpenses()
+    {
+        LOG.info("Listing all expenses using request API: " + RequestEndpoint.LIST_ALL_EXPENSE);
+        ListAllExpenseResponse listAllExpenseResponse = new ListAllExpenseResponse();
+        listAllExpenseResponse = expenseService.listAllExpenses(listAllExpenseResponse);
+        LOG.info("List all expenses successful!");
+        return listAllExpenseResponse;
     }
 
 }
