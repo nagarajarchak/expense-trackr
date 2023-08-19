@@ -22,7 +22,7 @@ public class ExpenseController {
     @PostMapping(value = RequestEndpoint.REGISTER_EXPENSE)
     public ExpenseResponse registerExpense(@RequestBody ExpenseRequest expenseRequest)
     {
-        LOG.info("Registering expense using request: " + RequestEndpoint.REGISTER_EXPENSE);
+        LOG.info("Registering expense using request api: " + RequestEndpoint.REGISTER_EXPENSE);
         ExpenseResponse expenseResponse = new ExpenseResponse();
         expenseResponse = expenseService.registerExpense(expenseRequest, expenseResponse);
         LOG.info("Expense registration successful!");
@@ -32,7 +32,7 @@ public class ExpenseController {
     @GetMapping(RequestEndpoint.LIST_ALL_EXPENSE)
     public ListAllExpenseResponse listAllExpenses()
     {
-        LOG.info("Listing all expenses using request: " + RequestEndpoint.LIST_ALL_EXPENSE);
+        LOG.info("Listing all expenses using request api: " + RequestEndpoint.LIST_ALL_EXPENSE);
         ListAllExpenseResponse listAllExpenseResponse = new ListAllExpenseResponse();
         listAllExpenseResponse = expenseService.listAllExpenses(listAllExpenseResponse);
         LOG.info("List all expenses successful!");
